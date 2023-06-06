@@ -16,16 +16,3 @@ elif (lastdigit > 5):
     print(f"and is greater than 5")
 else:
     print(f"and is less than 6 and not 0")
-
-
-# if (number < 0) and (number %10 != 0):
-#     number = number * -1
-#     lastdigit = number % 10
-#     if lastdigit < 5:
-#         print(f"is -{lastdigit} and is less than 6 and not 0")
-# else:
-#     lastdigit = number % 10
-#     if lastdigit > 5:
-#         print(f"is {lastdigit} and is greater than 5")
-#     else:
-#         print(f"is {lastdigit} and is 0")
