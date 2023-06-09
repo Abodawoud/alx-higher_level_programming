@@ -7,9 +7,9 @@ What do these lines print?
 >>> b
 
 <ul>
-<li>a
-b
-[1]
-✅[1, 2, 3, 4]
-[1, 2, 10, 4]
-</li>
+<li>a</li>
+<li>b</li>
+<li>[1]</li>
+<li>✅[1, 2, 3, 4]</li>
+<li>[1, 2, 10, 4]</li>
+</ul>
