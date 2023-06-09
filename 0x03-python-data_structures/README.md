@@ -1,10 +1,12 @@
 # Question #9
-What do these lines print?
-```Shallow copy```
+What do these lines print?\
+```Shallow Copy```
+```
 >>> a = [1, 2, 3, 4]
 >>> b = a
 >>> a[2] = 10
 >>> b
+```
 
 <ul>
 <li>a</li>
