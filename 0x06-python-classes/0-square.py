@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+
+"""Empty Square Task"""
+
+
 class Square:
-    """Class Square that defines a square."""
+    """ Empty """
     pass
