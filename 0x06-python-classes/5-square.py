@@ -65,7 +65,7 @@ class Square:
     Attributes:
         self (obj): self object.
     """
-        if not self.__size:
+        if self.__size == 0:
             print()
         else:
             for i in range(self.__size):
