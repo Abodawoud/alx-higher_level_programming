@@ -4,6 +4,7 @@
 
 
 class Square:
+
     """ Empty """
     def __init__(self, size=0):
         """Exceptions are documented in the same way as classes.
@@ -14,7 +15,7 @@ class Square:
     Attributes:
         size (int): Size of the Square.
     """
-        if isinstance(size, int) != True:
+        if isinstance(size, int) is not True:
             raise TypeError("size must be an integer")
         elif size < 0:
             raise ValueError("size must be >= 0")
