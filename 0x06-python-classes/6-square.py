@@ -69,7 +69,7 @@ class Square:
     Attributes:
         value (int): value of the Position.
     """
-        if (isinstance(value, tuple) is not True) and (len(value) != 2):
+        if (isinstance(value, tuple) is not True):
             raise TypeError("position must be a tuple of 2 positive integers")
         if value[0] < 0 or value[1] < 0:
             raise TypeError("position must be a tuple of 2 positive integers")
@@ -77,8 +77,9 @@ class Square:
             raise TypeError("position must be a tuple of 2 positive integers")
         if (isinstance(value[1], int) is not True):
             raise TypeError("position must be a tuple of 2 positive integers")
+        if (len(value) != 2):
+            raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
-
 
     def my_print(self):
         """Exceptions are documented in the same way as classes.
