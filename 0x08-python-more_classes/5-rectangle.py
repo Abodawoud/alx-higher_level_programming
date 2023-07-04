@@ -42,11 +42,19 @@ class Rectangle:
         return (2 * (self.__width + self.__height))
 
     def __str__(self):
+        new_matrix = []
+        sep = '\n'
         if self.__height == 0 or self.__width == 0:
-            return ""
-        new_list = ""
+            return (new_matrix)
         for row in (range(self.__height)):
+            new_list = ""
             for ele in (range(self.__width)):
                 new_list += "#"
-            new_list += "\n"
-        return (new_list[:-1])
+            new_matrix.append(new_list)
+        return (sep.join(new_matrix))
+
+    def __repr__(self):
+        return f"Rectangle({self.__width}, {self.__height})"
+
+    def __del__(self):
+        print("Bye rectangle...")
