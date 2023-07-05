@@ -20,6 +20,12 @@ last_name isn't string:
     ...
     TypeError: last_name must be a string
 
+2 missing args:
+    >>> say_my_name(None, None)
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
+
 Normal case:
     >>> say_my_name("Ahmed", "Farouk")
     My name is Ahmed Farouk
