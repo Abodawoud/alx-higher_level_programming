@@ -2,7 +2,7 @@
 """print_square module"""
 
 
-def print_square(size):
+def print_square(size=None):
     """Print square"""
 
     if (not isinstance(size, int)) or size is None:
