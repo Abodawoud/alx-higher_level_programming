@@ -2,7 +2,7 @@
 """say_my_name module"""
 
 
-def say_my_name(first_name="", last_name=""):
+def say_my_name(first_name=None, last_name=""):
     """Returns your name
     Arges:
         first_name: str
