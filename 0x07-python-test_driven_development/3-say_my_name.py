@@ -1,5 +1,13 @@
 #!/usr/bin/python3
+"""say_my_name module"""
+
+
 def say_my_name(first_name, last_name=""):
+    """Returns your name
+    Arges:
+        first_name: str
+        last_name: str
+    """
     if not isinstance(first_name, str) or first_name is None:
         raise TypeError("first_name must be a string")
     if not isinstance(last_name, str) or last_name:
