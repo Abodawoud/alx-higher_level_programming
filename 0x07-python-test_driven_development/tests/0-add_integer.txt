@@ -52,3 +52,16 @@ a, b negative:
 a, b float negative:
     >>> add_integer(-2.5, -1.5)
     -3
+
+NAN arg-case:
+    >>> add_integer(float("nan"), 12)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+inf arg-case:
+    >>> add_integer(float("inf"), -2)
+    inf
+
+    >>> add_integer(-float("inf"), 2)
+    -inf
