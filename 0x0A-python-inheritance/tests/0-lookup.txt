@@ -1,0 +1,10 @@
+The ``0-lookup`` module
+======================
+
+Using ``lookup``
+-------------------
+
+This is an lookup test file
+First import ``lookup`` from the ``0-lookup.py`` module:
+
+    >>> lookup = __import__("0-lookup").lookup
