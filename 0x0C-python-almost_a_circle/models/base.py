@@ -2,6 +2,7 @@
 """models/base.py"""
 import json
 
+
 class Base:
     """Class Base"""
 
@@ -17,5 +18,8 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
-        """function that returns the JSON representation of an object (string)"""
+        """function that returns the JSON representation
+        of an object (string)"""
+        if list_dictionaries == None:
+            return "[]"
         return (json.dumps(list_dictionaries))
