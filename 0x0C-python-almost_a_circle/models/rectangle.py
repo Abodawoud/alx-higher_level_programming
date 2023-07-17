@@ -91,3 +91,23 @@ class Rectangle(Base):
         """Width."""
         return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - "\
             f"{self.__width}/{self.__height}"
+
+    def update(self, *args, **kwargs):
+        """Width."""
+        if args:
+            attribute_names = ['id', 'width', 'height', 'x', 'y']
+            for attribute_name, value in zip(attribute_names, args):
+                setattr(self, attribute_name, value)
+        else:
+            for key, value1 in kwargs.items():
+                setattr(self, key, value1)
+
+    def to_dictionary(self):
+        """Width."""
+        dic = dict()
+        dic['width'] = self.width
+        dic['height'] = self.height
+        dic['id'] = self.id
+        dic['x'] = self.x
+        dic['y'] = self.y
+        return (dic)
