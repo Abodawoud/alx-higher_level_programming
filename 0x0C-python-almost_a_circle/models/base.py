@@ -52,8 +52,10 @@ class Base:
         """function that writes an Object to a text file,
         using a JSON representation"""
         instance = None
-        if dictionary:
+        if cls.__name__ == "Rectangle":
             instance = cls(1, 1)
+        else:
+            instance = cls(1)
         instance.update(**dictionary)
 
         return instance
