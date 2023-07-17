@@ -54,6 +54,6 @@ class Base:
         instance = None
         if dictionary:
             instance = cls(1, 1)
-            instance.update(**dictionary)
+        instance.update(**dictionary)
 
         return instance
