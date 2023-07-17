@@ -51,8 +51,9 @@ class Base:
     def create(cls, **dictionary):
         """function that writes an Object to a text file,
         using a JSON representation"""
-
-        instance = cls(1, 1)
-        instance.update(**dictionary)
+        instance = None
+        if dictionary:
+            instance = cls(1, 1)
+            instance.update(**dictionary)
 
         return instance
