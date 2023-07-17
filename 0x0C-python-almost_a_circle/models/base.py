@@ -39,7 +39,7 @@ class Base:
             file.write(js_str)
 
     @staticmethod
-    def from_json_string(json_string):
+    def from_json_string(json_string=None):
         """function that writes an Object to a text file,
         using a JSON representation"""
 
