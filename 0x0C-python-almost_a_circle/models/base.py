@@ -43,6 +43,6 @@ class Base:
         """function that writes an Object to a text file,
         using a JSON representation"""
 
-        if json_string is None:
+        if json_string is None or json_string is "":
             return "[]"
         return json.loads(json_string)
