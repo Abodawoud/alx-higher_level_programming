@@ -5,10 +5,9 @@ const myObject = {
 };
 console.log(myObject);
 
-function increment (val) {
+myObject.incr = function () {
   myObject.value += 1;
 }
-myObject.incr = increment;
 
 myObject.incr();
 console.log(myObject);
