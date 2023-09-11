@@ -7,5 +7,6 @@ const log = console.log;
 if (argv.length === 2 || argv.length === 3) {
   log(0);
 } else {
-    log(Math.max(...num));
+  const arg = [...num].sort((a, b) => a - b);
+  log(arg[arg.length - 2]);
 }
