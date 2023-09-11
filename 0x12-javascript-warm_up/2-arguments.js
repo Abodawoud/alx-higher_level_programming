@@ -3,8 +3,10 @@
 const { argv } = require('process');
 const log = console.log;
 
-if (argv.length == 2) {
+if (argv.length === 2) {
   log('No argument');
-} else {
+} else if (argv.length === 3) {
   log('Argument found');
+} else {
+  log('Arguments found');
 }
