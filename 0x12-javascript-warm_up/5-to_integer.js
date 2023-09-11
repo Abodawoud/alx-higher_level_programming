@@ -7,5 +7,5 @@ const num = Number(argv[2]);
 if (isNaN(num)) {
   log('Not a number');
 } else {
-  log(Math.floor(num));
+  log('My number: ' + Math.floor(num));
 }
