@@ -4,18 +4,13 @@ const PreSquare = require('./5-square.js');
 class Square extends PreSquare {
   constructor (size) {
     super(size, size);
-    this.size = size;
   }
 
   charPrint (c) {
     if (c === undefined) {
-      super.print();
+      super.print('X');
     } else {
-      let rows = this.size;
-      while (rows) {
-        console.log(c.repeat(this.size));
-        rows--;
-      }
+      super.print(c);
     }
   }
 }
