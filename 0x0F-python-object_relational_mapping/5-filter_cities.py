@@ -21,9 +21,11 @@ if __name__ == '__main__':
     mycursor.execute(query)
 
     result = mycursor.fetchall()
-    for row in result[:-1]:
-        print(row[0], end=", ")
-    print(result[-1][0])
+    if result:
+        for row in result[:-1]:
+            for i in row:
+                print(i, end=", ")
+        print(result[-1][0])
 
     mycursor.close()
     mydb.close()
