@@ -14,7 +14,7 @@ if __name__ == "__main__":
     cur = db.cursor()
 
     sql_query = "SELECT * FROM states WHERE name LIKE %s"
-    cur.execute(sql_query, (name + '%',))
+    cur.execute(sql_query, (name,))
     rows = cur.fetchall()
 
     for row in rows:
