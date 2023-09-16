@@ -26,6 +26,8 @@ if __name__ == '__main__':
             for i in row:
                 print(i, end=", ")
         print(result[-1][0])
+    else:
+        print()
 
     mycursor.close()
     mydb.close()
