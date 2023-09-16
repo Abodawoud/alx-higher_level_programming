@@ -14,7 +14,7 @@ if __name__ == '__main__':
         port=3306
     )
     mycursor = mydb.cursor()
-    x = re.match("[A-Za-z\s]+", argv[4])
+    x = re.match("[A-Za-z\\s]+", argv[4])
 
     query = """SELECT * FROM states
     WHERE BINARY name = '{}' ORDER BY ID ASC""".format(x[0])
