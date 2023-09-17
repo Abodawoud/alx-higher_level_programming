@@ -15,9 +15,6 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
     states = session.query(State).filter(State.name.like('%a%')).all()
-    if states:
-        for state in states:
-            print(f"{state.id}: {state.name}")
-    else:
-        print('Nothing')
+    for state in states:
+        print(f"{state.id}: {state.name}")
     session.close()
