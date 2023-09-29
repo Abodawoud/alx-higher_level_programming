@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""Peak"""
+
+
 def find_peak(lst):
     if not lst:
         return None
