@@ -5,11 +5,10 @@ import sys
 
 
 headers = {
-    'Authorization': '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',
+    'Authorization': sys.argv[2],
     'Accept': 'application/vnd.github.v3+json',
 }
-username = 'Abodawoud'
-url = f'https://api.github.com/users/{username}'
+url = f'https://api.github.com/users/{sys.argv[1]}'
 
 
 response = requests.get(url, headers=headers)
