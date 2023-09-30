@@ -17,6 +17,6 @@ if __name__ == "__main__":
         user_data = response.json()
         for i in range(0, 10):
             print(f'{user_data[i].get("sha")}: \
-                  {user_data[i].get("commit").get("author").get("name")}')
+{user_data[i].get("commit").get("author").get("name")}')
     else:
         print("None")
