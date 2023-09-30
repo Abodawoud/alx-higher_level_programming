@@ -1,5 +1,5 @@
-#!/usr/bin/python3
 """Peak"""
+#!/usr/bin/python3
 
 
 def find_peak(lst):
