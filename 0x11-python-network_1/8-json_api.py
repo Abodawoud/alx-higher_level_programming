@@ -15,6 +15,8 @@ if __name__ == "__main__":
                 print("No result")
             else:
                 print("[{}] {}".format(json_o.get('id'), json_o.get('name')))
-        except:
+        except ValueError:
             print("Not a valid JSON")
-    posting(sys.argv[1])
+
+    if len(sys.argv) > 1:
+        posting(sys.argv[1])
