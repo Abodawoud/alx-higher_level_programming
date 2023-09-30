@@ -11,7 +11,6 @@ if __name__ == "__main__":
     }
     url = f'https://api.github.com/user'
 
-
     response = requests.get(url, headers=headers)
     if response.status_code >= 400:
         print("None")
