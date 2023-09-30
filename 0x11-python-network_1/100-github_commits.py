@@ -14,8 +14,8 @@ if __name__ == "__main__":
     response = requests.get(url)
 
     user_data = response.json()
-    i = -1
+    i = -9
     for _ in range(10):
         print(f'{user_data[i].get("sha")}: \
 {user_data[i].get("commit").get("author").get("name")}')
-        i -= 1
+        i += 1
