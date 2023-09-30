@@ -12,4 +12,7 @@ url = f'https://api.github.com/users/{sys.argv[1]}'
 
 
 response = requests.get(url, headers=headers)
-print(response.json()["id"])
+if response.status_code >= 400:
+    print("None")
+else:
+    print(response.json()["id"])
