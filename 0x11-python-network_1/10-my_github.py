@@ -3,7 +3,6 @@
 import requests
 import sys
 
-
 headers = {
     'Authorization': sys.argv[2],
     'Accept': 'application/vnd.github.v3+json',
