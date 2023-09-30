@@ -9,11 +9,14 @@ if __name__ == "__main__":
     #     "Accept": "application/vnd.github.v3+json",
     #     "X-GitHub-Api-Version": "2022-11-28"
     # }
-    url = f'https://api.github.com/repos/{sys.argv[2]}/{sys.argv[1]}/commits'
+    try:
+        url = f'https://api.github.com/repos/{sys.argv[2]}/{sys.argv[1]}/commits'
 
-    response = requests.get(url)
+        response = requests.get(url)
 
-    user_data = response.json()
-    for i in range(10):
-        print(f'{user_data[i].get("sha")}: \
-{user_data[i].get("commit").get("author").get("name")}')
+        user_data = response.json()
+        for i in range(0, 10):
+            print(f'{user_data[i].get("sha")}: \
+    {user_data[i].get("commit").get("author").get("name")}')
+    except:
+        pass
