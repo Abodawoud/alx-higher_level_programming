@@ -4,20 +4,18 @@ import requests
 import sys
 
 if __name__ == "__main__":
-    def posting(letter, arg=""):
-        print(arg)
-        url = "http://0.0.0.0:5000/search_user"
-        values = {letter: arg}
-        response = requests.post(url, data=values)
-
-        try:
-            json_o = response.json()
-            if not json_o:
-                print("No result")
-            else:
-                print("[{}] {}".format(json_o.get('id'), json_o.get('name')))
-        except ValueError:
-            print("Not a valid JSON")
-
+    arg = ""
     if len(sys.argv) > 1:
-        posting("q", sys.argv[1])
+        arg = sys.argv[1]
+    url = "http://0.0.0.0:5000/search_user"
+    values = {"q": arg}
+    response = requests.post(url, data=values)
+
+    try:
+        json_o = response.json()
+        if not json_o:
+            print("No result")
+        else:
+            print("[{}] {}".format(json_o.get('id'), json_o.get('name')))
+    except ValueError:
+        print("Not a valid JSON")
