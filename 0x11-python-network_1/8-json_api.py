@@ -4,9 +4,10 @@ import requests
 import sys
 
 if __name__ == "__main__":
-    def posting(arg=""):
+    def posting(letter, arg=""):
+        print(arg)
         url = "http://0.0.0.0:5000/search_user"
-        values = {"q": arg}
+        values = {letter: arg}
         response = requests.post(url, data=values)
 
         try:
@@ -19,4 +20,4 @@ if __name__ == "__main__":
             print("Not a valid JSON")
 
     if len(sys.argv) > 1:
-        posting(sys.argv[1])
+        posting("q", sys.argv[1])
