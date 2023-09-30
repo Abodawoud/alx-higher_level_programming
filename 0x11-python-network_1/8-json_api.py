@@ -7,7 +7,7 @@ if __name__ == "__main__":
     def posting(arg=""):
         url = "http://0.0.0.0:5000/search_user"
         values = {"q": arg}
-        response = requests.post(url, values)
+        response = requests.post(url, data=values)
 
         try:
             json_o = response.json()
